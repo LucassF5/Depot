@@ -48,8 +48,20 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "product is not valid without a unique title" do
-    product = Product.new(title: product(:ruby).title, description: "yyy", price: 1, image_url: "fred.gif")
+    product = Product.new(title: products(:ruby).title, description: "yyy", price: 1, image_url: "fred.gif")
     assert product.invalid?
     assert_equal ["has already been taken"], product.errors[:title]
+
+    product.title = "New title with 10 characters"
+    assert product.valid?
+  end
+
+  test "title has to be at least 10 characters" do
+    product = Product.new(title: "short", description: "yyy", price: 1, image_url: "fred.gif")
+    assert product.invalid?
+    assert_equal ["Title must be at least 10 characters long."], product.errors[:title]
+
+    product.title = "New title long enough"
+    product.valid?
   end
 end
