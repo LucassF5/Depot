@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @cart %>
-
 <div>
-  <%= link_to "Edit this cart", edit_cart_path(@cart) %> |
-  <%= link_to "Back to carts", carts_path %>
+  <p style="color: green"><%= notice %></p>
 
-  <%= button_to "Destroy this cart", @cart, method: :delete %>
+  <%= render @cart %>
+
+  <div class="flex justify-around align-center gap-8 mt-4">
+    <%= link_to "Edit this cart", edit_cart_path(@cart) %>
+    <%= link_to "Back to carts", carts_path %>
+
+    <%= button_to "Destroy this cart", @cart, method: :delete %>
+  </div>
 </div>
