@@ -4,7 +4,7 @@
   <table class= "table-auto" >
     <% cart.line_items.each do |line_item| %>
       <tr>
-        <td class= "text-right" > <%= line_item. quantity %> </td>
+        <td class= "text-right" > <%= line_item.quantity %> </td>
         <td>&times;</td>
         <td class= "pr-2" >
           <%= line_item.product.title %>

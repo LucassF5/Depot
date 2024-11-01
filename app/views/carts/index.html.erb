@@ -1,14 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<div class="w-full">
+  <p class="text-green-600 px-2 rounded bg-green-100 inline-block mb-3"><%= notice %></p>
 
-<h1>Carts</h1>
+  <div id="carts">
+    <% @carts.each do |cart| %>
+      <%= render cart %>
+      <p>
+        <%= link_to "Show this cart", cart %>
+      </p>
+    <% end %>
+  </div>
 
-<div id="carts">
-  <% @carts.each do |cart| %>
-    <%= render cart %>
-    <p>
-      <%= link_to "Show this cart", cart %>
-    </p>
-  <% end %>
+  <%= link_to "New cart", new_cart_path %>
 </div>
-
-<%= link_to "New cart", new_cart_path %>
