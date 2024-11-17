@@ -13,25 +13,26 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"input-field" %>
   </div>
 
   <div>
     <%= form.label :address, style: "display: block" %>
-    <%= form.text_area :address %>
+    <%= form.text_area :address, class:"input-field" %>
   </div>
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class:"input-field" %>
   </div>
 
   <div>
     <%= form.label :pay_type, style: "display: block" %>
-    <%= form.number_field :pay_type %>
+    <%= form.select :pay_type, Order.pay_types.keys, 
+    {prompt: 'Select a payment method'}, class:"input-field" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Place Order", class:"rounded-lg py-3 px-5 bg-green-200 text-black inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
