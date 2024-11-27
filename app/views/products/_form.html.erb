@@ -14,25 +14,26 @@
 
   <div class="my-5">
     <%= form.label :title %>
-    <%= form.text_field :title, class: "block shadow rounded-md… box-border h-6 w-56" %>
+    <%= form.text_field :title, class: "input-field" %>
   </div>
 
   <div class="my-5">
     <%= form.label :description %>
-    <%= form.text_area :description, rows: 10, class: "block shadow box-border w-56" %>
+    <%= form.text_area :description, rows: 10, class: "input-field" %>
   </div>
 
   <div class="my-5">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url, class: "block shadow rounded-md… box-border h-6 w-56" %>
+    <%= form.text_field :image_url, class: "input-field" %>
   </div>
 
   <div class="my-5">
     <%= form.label :price %>
-    <%= form.text_field :price, class: "block shadow rounded-md… box-border h-6 w-56" %>
+    <%= form.text_field :price, class: "input-field" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "text-2xl mx-auto bg-green-400 rounded-lg py-3 px-5 w-56" %>
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white
+        inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
