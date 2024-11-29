@@ -10,4 +10,8 @@
   .navbar-list-items { @apply
     block px-4 py-2 rounded-md hover:bg-green-700 hover:text-white transition
   }
+
+  .payment-field { @apply
+    block shadow border border-slate-400 outline-none px-3 py-2 mt-2 mb-5 w-3/4
+  }
 }
