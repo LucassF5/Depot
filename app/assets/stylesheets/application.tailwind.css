@@ -8,7 +8,7 @@
   }
 
   .navbar-list-items { @apply
-    block px-4 py-2 rounded-md hover:bg-green-700 hover:text-white transition
+    block px-4 rounded-md hover:bg-green-700 hover:text-white transition
   }
 
   .payment-field { @apply
