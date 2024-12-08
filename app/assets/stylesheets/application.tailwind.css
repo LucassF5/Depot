@@ -14,4 +14,9 @@
   .payment-field { @apply
     block shadow border border-slate-400 outline-none px-3 py-2 mt-2 mb-5 w-3/4
   }
+
+  .general-button { @apply
+    rounded-lg py-3 px-5 inline-block font-medium cursor-pointer bg-green-500 text-white
+  }
+  
 }
